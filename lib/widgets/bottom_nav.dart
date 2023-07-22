@@ -2,8 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:heraassignment/ForgotPass.dart';
 import 'package:heraassignment/HomePage.dart';
-import 'package:heraassignment/Login.dart';
-import 'package:heraassignment/album.dart';
+
 import 'package:heraassignment/update_profile.dart';
 
 import '../create_post.dart';
@@ -19,7 +18,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
   var screen=[
    const HomePage(),
     const ForgotPassword(),
-    UpdateProfile()
+    const UpdateProfile()
     // AlbumScreen()
      // CreatePost()
 
@@ -35,7 +34,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
          height: 60,
         width: double.infinity,
         decoration: const BoxDecoration(
-            color: const Color(0xFF1098C2)
+            color: Color(0xFF1098C2)
 
         ),
         child: Container(
@@ -57,11 +56,11 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                 items: [
 
                   const BottomNavigationBarItem(icon: Icon(Icons.home,),label: ""),
-                  const BottomNavigationBarItem(icon: const Icon(Icons.abc),label: ""),
+                  const BottomNavigationBarItem(icon: Icon(Icons.abc),label: ""),
                   BottomNavigationBarItem(icon:Container(
                     height: 30,
                     width: 30,
-                    decoration:  BoxDecoration(shape: BoxShape.circle,color: Colors.greenAccent,image: DecorationImage(image: AssetImage("assets/aneeb.jpg"))),
+                    decoration:  const BoxDecoration(shape: BoxShape.circle,color: Colors.greenAccent,image: DecorationImage(image: AssetImage("assets/aneeb.jpg"))),
                   ),label: ""),
                 ],
               ),
@@ -73,7 +72,7 @@ class _BottomNavScreenState extends State<BottomNavScreen> {
                  child:  GestureDetector(
 
                    onTap: (){
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=>CreatePost()));
+                     Navigator.push(context, MaterialPageRoute(builder: (context)=>const CreatePost()));
                    },
                    child: Container(
                height: 60,
